@@ -45,6 +45,9 @@ void Vector::checkSize() {
 
 void Vector::remove() {
 
+    if(this->count == 0)
+        throw std::logic_error("Cannot remove element from empty vector.");
+
     this->count -= 1;
 
     if(this->count == (this->capacity / 2)) {

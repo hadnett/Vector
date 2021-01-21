@@ -58,3 +58,15 @@ TEST_F(Vector_UnitTest, testRemove) {
 
     ASSERT_EQ(2, vector.capacity);
 }
+
+TEST_F(Vector_UnitTest, testRemoveInvalid) {
+    Vector vector(2);
+
+    vector.add(1);
+    vector.add(2);
+
+    vector.remove();
+    vector.remove();
+
+    EXPECT_THROW(vector.remove(),std::logic_error);
+}

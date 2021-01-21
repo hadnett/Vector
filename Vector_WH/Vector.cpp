@@ -2,6 +2,7 @@
 // Created by William Hadnett on 20/01/2021.
 //
 
+#include <iostream>
 #include "Vector.h"
 
 Vector::Vector() {
@@ -19,5 +20,9 @@ Vector::Vector(int capacity) {
 void Vector::add(int n) {
     this->array[this->count] = n;
     this->count ++;
+}
+
+Vector::~Vector() {
+    delete[] this->array;
 }
 

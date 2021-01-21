@@ -12,6 +12,7 @@ public:
     int count;
 
     Vector();
+    ~Vector();
     explicit Vector(int capacity);
     void checkSize(Vector& vector);
     void add(int n);

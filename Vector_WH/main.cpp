@@ -1,6 +1,10 @@
 #include <iostream>
+#include "Vector.h"
+
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Vector vector(100);
+    cout << vector.capacity << endl;
     return 0;
 }

@@ -16,6 +16,7 @@ public:
     explicit Vector(int capacity);
     void checkSize();
     void add(int n);
+    void remove();
 };
 
 #endif //VECTOR_VECTOR_H

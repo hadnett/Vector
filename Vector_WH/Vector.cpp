@@ -40,4 +40,22 @@ void Vector::checkSize() {
         this->array[i] = tempPtr[i];
 
     delete [] tempPtr;
+    tempPtr = nullptr;
+}
+
+void Vector::remove() {
+
+    this->count -= 1;
+
+    if(this->count == (this->capacity / 2)) {
+        this->capacity /= 2;
+        int* tempPtr = this->array;
+        this->array = new int[this->capacity];
+
+        for(int i = 0; i <= this->capacity; i++)
+            this->array[i] = tempPtr[i];
+
+        delete [] tempPtr;
+        tempPtr = nullptr;
+    }
 }

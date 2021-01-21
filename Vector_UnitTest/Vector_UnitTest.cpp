@@ -42,3 +42,19 @@ TEST_F(Vector_UnitTest, testCheckSize) {
     ASSERT_EQ(3, vector.count);
     ASSERT_EQ(4, vector.capacity);
 }
+
+TEST_F(Vector_UnitTest, testRemove) {
+    Vector vector(4);
+
+    vector.add(1);
+    vector.add(2);
+    vector.add(3);
+    vector.add(3);
+
+    ASSERT_EQ(4, vector.capacity);
+
+    vector.remove();
+    vector.remove();
+
+    ASSERT_EQ(2, vector.capacity);
+}

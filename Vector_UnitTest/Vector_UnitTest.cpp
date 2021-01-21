@@ -31,3 +31,14 @@ TEST_F(Vector_UnitTest, testAdd) {
 
     ASSERT_EQ(2, vector.count);
 }
+
+TEST_F(Vector_UnitTest, testCheckSize) {
+    Vector vector(2);
+
+    vector.add(1);
+    vector.add(2);
+    vector.add(3);
+
+    ASSERT_EQ(3, vector.count);
+    ASSERT_EQ(4, vector.capacity);
+}

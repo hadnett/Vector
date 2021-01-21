@@ -18,6 +18,7 @@ Vector::Vector(int capacity) {
 }
 
 void Vector::add(int n) {
+    checkSize();
     this->array[this->count] = n;
     this->count ++;
 }
@@ -26,3 +27,17 @@ Vector::~Vector() {
     delete[] this->array;
 }
 
+void Vector::checkSize() {
+
+    if(this->count < this->capacity)
+        return;
+
+    this->capacity *= 2;
+    int* tempPtr = this->array;
+    this->array = new int[this->capacity];
+
+    for(int i = 0; i <= *tempPtr; i++)
+        this->array[i] = tempPtr[i];
+
+    delete [] tempPtr;
+}

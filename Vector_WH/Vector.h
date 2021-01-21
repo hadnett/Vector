@@ -14,7 +14,7 @@ public:
     Vector();
     ~Vector();
     explicit Vector(int capacity);
-    void checkSize(Vector& vector);
+    void checkSize();
     void add(int n);
 };
 
